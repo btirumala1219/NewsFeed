@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import { Button } from 'react-bootstrap';
 
 class Home extends Component {
   constructor(props) {
@@ -10,26 +11,22 @@ class Home extends Component {
   }
 
   componentDidMount() {
-      /*
-    axios
-      .get('http://localhost:8082/api/books')
-      .then(res => {
-        this.setState({
-          books: res.data
-        })
-      })
-      .catch(err =>{
-        console.log('Error from ShowBookList');
-      })
-      */
+
   };
 
 
   render() {
 
     return (
-      <div>
-          Home Page Bruh
+      <div className="homeBody col-12 span-4">
+          <div className="container">
+            <div className="homeTitle col-12">
+              YourFeed
+            </div>
+            <div className="col-12 text-center">
+              <Button className="">Get Started</Button>
+            </div>
+          </div>
       </div>
     );
   }
