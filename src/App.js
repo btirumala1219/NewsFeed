@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Home from './components/home';
 import { Button } from 'react-bootstrap';
+import NewUser from './components/newUser';
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="bodyBack">
         <div className="col-12 navBar">
           <div className="row">
             <div className="navBarText col-11">  
@@ -22,6 +23,7 @@ class App extends Component {
         </div>
         <Router>
             <Route exact path='/' component={Home} />
+            <Route path='/newUser' component={NewUser} />
         </Router>
       </div>
     );

@@ -38,9 +38,9 @@
   line-height: 2.5;
 }
 
-.homeBody {
-  background-color: #e7e7e7;
+.bodyBack {
   height: 100vh;
+  background-color: #e7e7e7;
 }
 
 .homeTitle {
