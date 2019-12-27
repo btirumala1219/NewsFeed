@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form} from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
+import Dash from './dashbar/dashbar';
 
 class NewUser extends Component {
   constructor(props) {
@@ -56,9 +57,13 @@ class NewUser extends Component {
     }
 
     return (
-      <div className="container">
-        {submitForm}
+      <div>
+        <Dash />
+          <div className="container">
+           {submitForm}
+          </div>
       </div>
+      
     );
   }
 }
