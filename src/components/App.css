@@ -49,6 +49,13 @@
   font-size: 75pt;
 }
 
+.navBarHeadText {
+  text-align: center;
+  color: white;
+  font-size: large;
+  line-height: 2.5;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

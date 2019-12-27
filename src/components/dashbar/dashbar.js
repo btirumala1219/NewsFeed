@@ -65,8 +65,11 @@ class Dash extends Component {
       <div>
 					<div className="col-12 navBar">
 							<div className="row">
-							<div className="navBarText col-11">  
+							<div className="navBarText col-2">  
 									Welcome {this.state.userEmail}
+							</div> 
+							<div className="navBarHeadText col-8">  
+									{this.props.heading}
 							</div> 
 							{sidebutton}         
 							</div>

@@ -86,6 +86,7 @@ class LogIn extends Component {
 
   render() {
     let respMes;
+    const heading = "Log In Page";
 
     if(this.state.signedIn){
       respMes = <div>You are signed in</div>
@@ -134,7 +135,7 @@ class LogIn extends Component {
 
     return (
       <div>
-        <Dash />
+        <Dash heading={heading} />
         <div className="container">
           {respMes}
         </div>

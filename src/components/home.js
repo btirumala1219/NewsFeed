@@ -6,10 +6,10 @@ import Dash from './dashbar/dashbar';
 
 class Home extends Component {
   render() {
-
+    const heading = "Home";
     return (
       <div className="bodyBack">
-      <Dash />
+      <Dash heading={heading} />
         <div className="col-12 span-4">
             <div className="container">
               <div className="homeTitle col-12">
