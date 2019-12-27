@@ -3,7 +3,7 @@ import { Button, Form} from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
 
-class NewUser extends Component {
+class LogIn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -63,4 +63,4 @@ class NewUser extends Component {
   }
 }
 
-export default NewUser;
+export default LogIn;

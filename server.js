@@ -4,6 +4,7 @@ var cors = require('cors');
 bodyParser = require('body-parser');
 // routes
 const user = require('./routes/api/user');
+const activesession = require('./routes/api/activesession');
 
 const app = express();
 
@@ -22,6 +23,7 @@ app.get('/', (req, res) => res.send('Hello world!'));
 
 // use Routes
 app.use('/api/user', user);
+app.use('/api/activesession', activesession);
 
 const port = process.env.PORT || 8082;
 
