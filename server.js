@@ -5,6 +5,7 @@ bodyParser = require('body-parser');
 // routes
 const user = require('./routes/api/user');
 const activesession = require('./routes/api/activesession');
+const preferences = require('./routes/api/preferences');
 
 const app = express();
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => res.send('Hello world!'));
 // use Routes
 app.use('/api/user', user);
 app.use('/api/activesession', activesession);
+app.use('/api/preferences', preferences);
 
 const port = process.env.PORT || 8082;
 
