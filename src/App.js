@@ -6,6 +6,9 @@ import LogIn from './components/login';
 import LogOut from './components/logout';
 import Home from './components/home';
 import NewUser from './components/newUser';
+import SourceSelect from './components/sourceSelect';
+import NewsFeed from './components/newsfeed';
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,6 +27,8 @@ class App extends Component {
             <Route path='/newUser' component={NewUser} />
             <Route path='/login' component={LogIn} />
             <Route path='/logout' component={LogOut} />
+            <Route path='/srcselect' component={SourceSelect} />
+            <Route path='/feed' component={NewsFeed} />
         </Router>
       </div>
     );

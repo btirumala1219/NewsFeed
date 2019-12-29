@@ -3,6 +3,7 @@ import { Button, Form} from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
 import Dash from './dashbar/dashbar';
+import { Link } from 'react-router-dom';
 
 class LogIn extends Component {
   constructor(props) {
@@ -89,12 +90,27 @@ class LogIn extends Component {
     const heading = "Log In Page";
 
     if(this.state.signedIn){
-      respMes = <div>You are signed in</div>
+      respMes = <div>
+        <div>You are signed in</div>
+        <Link className="navBarSignIn col" to="/srcselect/">
+          <Button >
+            Select Source
+          </Button>
+        </Link>
+        </div>
     }
     else{
       if(this.state.entered){
         if(this.state.correctLogin){
-          respMes = <div>Logged In!<div>UserName = {this.state.userEmail}</div></div>
+          respMes = <div>
+            <div>Logged In!<div>UserName = {this.state.userEmail}</div></div>
+            <Link className="navBarSignIn col" to="/srcselect/">
+              <Button >
+                Select Source
+              </Button>
+            </Link>
+          </div>
+            
         }
         else{
           respMes = <div>

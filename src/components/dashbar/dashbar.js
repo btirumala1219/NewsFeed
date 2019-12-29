@@ -55,7 +55,7 @@ class Dash extends Component {
     else{
 			sidebutton = 	
 			<Link className="navBarSignIn col" to="/login/">
-        <Button >
+        <Button className="navBarSignIn col">
           Sign In
         </Button>
 			</Link>
