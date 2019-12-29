@@ -4,7 +4,6 @@ import '../App.css';
 import axios from 'axios';
 import Dash from './dashbar/dashbar';
 import { Link } from 'react-router-dom';
-import { test } from '../scrapers/wrapper';
 
 class LogIn extends Component {
   constructor(props) {
@@ -21,7 +20,6 @@ class LogIn extends Component {
 
   componentDidMount() {
     // check if we are already logged in
-    test();
     var self = this;
     axios
     .get('http://localhost:8082/api/activesession/getactivesession')

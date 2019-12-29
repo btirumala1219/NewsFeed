@@ -4,6 +4,7 @@ import '../App.css';
 import axios from 'axios';
 import Dash from './dashbar/dashbar';
 import { Link } from 'react-router-dom';
+import { test } from '../scrapers/wrapper';
 
 class SourceSelect extends Component {
   constructor(props) {
@@ -14,6 +15,7 @@ class SourceSelect extends Component {
   }
 
   componentDidMount() {
+    test();
     var self = this;
     axios
     .get('http://localhost:8082/api/activesession/getactivesession')
