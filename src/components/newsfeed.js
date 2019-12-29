@@ -1,21 +1,30 @@
 import React, { Component } from 'react';
-import { Button, Form} from 'react-bootstrap';
+import { Card, Button} from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
 import Dash from './dashbar/dashbar';
 import { Link } from 'react-router-dom';
-import { test } from '../scrapers/wrapper';
+import ScrapeWrapper from '../scrapers/wrapper';
 
-class SourceSelect extends Component {
+class NewsFeed extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      signedIn: false
+      hackernews: []
     };
   }
 
+  async getfromhackernews() {
+    var scrapewrapper = new ScrapeWrapper();
+    var hcknewstop10 = await scrapewrapper.get10hackernews();
+    this.setState({
+        hackernews: hcknewstop10
+    })
+    //console.log(hcknewstop10);
+  }
+
   componentDidMount() {
-    test();
+    this.getfromhackernews();
     var self = this;
     axios
     .get('http://localhost:8082/api/activesession/getactivesession')
@@ -42,14 +51,22 @@ class SourceSelect extends Component {
     return (
       <div>
         <Dash heading={heading} />
-        <Link className="navBarSignIn col" to="/logout/">
-            <Button className="navBarSignIn col">
-            Sign Out
-            </Button>
-		</Link>
+
+        {this.state.hackernews.map((article) => (
+        <Card style={{ width: '18rem' }}>
+            <Card.Body>
+                <Card.Title>{article.source}</Card.Title>
+                <Card.Text>{article.title}
+                </Card.Text>
+                <a href={article.url} target="_blank">
+                    <Button variant="primary">Go to article</Button>
+                </a>
+            </Card.Body>
+        </Card>
+        ))}
       </div>
     );
   }
 }
 
-export default SourceSelect;
+export default NewsFeed;
