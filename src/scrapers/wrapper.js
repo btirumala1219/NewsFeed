@@ -8,10 +8,6 @@
 */
 
 import HackerNews from './sources/hackernews';
-import React, { Component } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom'
-import axios from 'axios';
 
 class ScrapeWrapper {
 

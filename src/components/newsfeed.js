@@ -3,7 +3,6 @@ import { Card, Button} from 'react-bootstrap';
 import '../App.css';
 import axios from 'axios';
 import Dash from './dashbar/dashbar';
-import { Link } from 'react-router-dom';
 import ScrapeWrapper from '../scrapers/wrapper';
 
 class NewsFeed extends Component {
