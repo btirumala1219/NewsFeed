@@ -22,7 +22,7 @@ class Dash extends Component {
       .get('http://3.19.32.4/api/activesession/getactivesession')
       .then(res => {
         console.log(res.data[0].userAcEmail);
-        if(res.data[0].userAcEmail === ""){
+        if(res.data[0].userAcEmail === "" || res.data[0].userAcEmail === undefined){
           this.setState({
             loggedIn: false,
             userEmail: "",
