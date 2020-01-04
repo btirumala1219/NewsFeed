@@ -36,7 +36,7 @@ class Dash extends Component {
         }
       })
       .catch(err => {
-        console.log("Error ins making new Uss  qer!");
+        console.log("Error ins making new Uss  qer!" + err);
       })
 	}
 	

@@ -10,14 +10,10 @@ const preferences = require('./routes/api/preferences');
 const app = express();
 
 const path = require("path");
-app.use(express.static(path.join(__dirname, "build/")));
+app.use(express.static(path.join(__dirname, "/build/")));
 
 // Connect Database
 connectDB()
-
-app.get('*', (req,res) =>{
-    res.sendFile(path.join(__dirname+'/build/index.html'));
-});
 
 // cors
 app.use(cors({ origin: true, credentials: true }));
