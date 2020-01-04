@@ -19,7 +19,7 @@ class Dash extends Component {
 
   areWeLoggedIn(){
     axios
-      .get('http://localhost:8082/api/activesession/getactivesession')
+      .get('http://localhost:5000/api/activesession/getactivesession')
       .then(res => {
         console.log(res.data[0].userAcEmail);
         if(res.data[0].userAcEmail === ""){
