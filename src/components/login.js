@@ -22,7 +22,7 @@ class LogIn extends Component {
     // check if we are already logged in
     var self = this;
     axios
-    .get('http://localhost:8082/api/activesession/getactivesession')
+    .get('http://3.19.32.4/api/activesession/getactivesession')
     .then(res => {
       if(res.data[0].userAcEmail !== ''){
         self.setState({
@@ -46,7 +46,7 @@ class LogIn extends Component {
   validLogIn(email, pass){
     var self = this;
     axios
-    .get('http://localhost:8082/api/user/User/')
+    .get('http://3.19.32.4/api/user/User/')
     .then(res => {
       res.data.forEach(function(loginval){
         if(loginval.userEmail === email && loginval.userPass === pass){
@@ -68,10 +68,10 @@ class LogIn extends Component {
     };
 
     axios
-    .get('http://localhost:8082/api/activesession/getactivesession')
+    .get('http://3.19.32.4/api/activesession/getactivesession')
     .then(res => {
       axios
-      .put('http://localhost:8082/api/activesession/' + res.data[0]._id, data)
+      .put('http://3.19.32.4/api/activesession/' + res.data[0]._id, data)
       .then(res => {
         console.log(res);
         window.location.reload(false);

@@ -16,7 +16,7 @@ class SourceSelect extends Component {
   componentDidMount() {
     var self = this;
     axios
-    .get('http://localhost:8082/api/activesession/getactivesession')
+    .get('http://3.19.32.4/api/activesession/getactivesession')
     .then(res => {
       if(res.data[0].userAcEmail !== ''){
         self.setState({

@@ -13,10 +13,10 @@ class LogOut extends Component {
 		};
 
 		axios
-		.get('http://localhost:8082/api/activesession/getactivesession')
+		.get('http://3.19.32.4/api/activesession/getactivesession')
 		.then(res => {
 			axios
-			.put('http://localhost:8082/api/activesession/' + res.data[0]._id, data)
+			.put('http://3.19.32.4/api/activesession/' + res.data[0]._id, data)
 			.then(res => {
 				console.log(res);
 			})

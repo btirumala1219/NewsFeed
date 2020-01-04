@@ -26,7 +26,7 @@ class NewUser extends Component {
     };
 
     axios
-      .post('http://localhost:8082/api/user/newuser', data)
+      .post('http://3.19.32.4/api/user/newuser', data)
       .then(res => {
       })
       .catch(err => {

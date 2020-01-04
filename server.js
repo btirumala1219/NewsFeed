@@ -28,6 +28,6 @@ app.use('/api/user', user);
 app.use('/api/activesession', activesession);
 app.use('/api/preferences', preferences);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8082;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
