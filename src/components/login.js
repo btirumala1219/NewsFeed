@@ -24,7 +24,12 @@ class LogIn extends Component {
     axios
     .get('http://3.19.32.4/api/activesession/getactivesession')
     .then(res => {
-      if(res.data[0].userAcEmail !== '' || res.data[0].userAcEmail !== undefined){
+      if(res.data[0].userAcEmail === "" || res.data[0].userAcEmail === undefined){
+        self.setState({
+          signedIn: false
+        });
+      }
+      else{
         self.setState({
           signedIn: true
         })
