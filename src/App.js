@@ -8,6 +8,11 @@ import Home from './components/home';
 import NewUser from './components/newUser';
 import SourceSelect from './components/sourceSelect';
 import NewsFeed from './components/newsfeed';
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-119878427-2";
+
+ReactGA.initialize(trackingId);
 
 class App extends Component {
   constructor(props) {
