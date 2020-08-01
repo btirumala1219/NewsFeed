@@ -20,6 +20,8 @@
     "react-scripts": "3.3.0"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "server": "nodemon server.js",
     "build": "react-scripts build",
@@ -43,6 +45,8 @@
     ]
   },
   "devDependencies": {
-    "concurrently": "^5.0.2"
-  }
+    "concurrently": "^5.0.2",
+    "gh-pages": "^3.1.0"
+  },
+  "homepage": "http://btirumala1219.github.io/NewsFeed"
 }
